@@ -115,28 +115,10 @@ set hidden
 set colorcolumn=81
 
 " Colorscheme
-if has("gui_running")
-  " Tell the term has 256 colors
-  set t_Co=256
-  set term=gnome-256color
-  colorscheme Tomorrow-Night-Eighties
-
-  " solarized
-  " colorscheme solarized
-  " syntax enable
-  " set background=light
-  " set background=dark
-else
-  set term=xterm-256color
-  colorscheme Tomorrow-Night-Eighties
-
-  " solarized
-  " colorscheme solarized
-  " let g:solarized_termcolors=256
-  " syntax enable
-  " set background=dark
-  " set background=light
-endif
+" Tell the term has 256 colors
+set t_Co=256
+set term=gnome-256color
+colorscheme Tomorrow-Night-Eighties
 
 " Use Ack instead of grep
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -529,20 +511,6 @@ function! QuickfixFilenames()
 endfunction
 command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
 
-
-" Rename current file
-function! RenameFile()
-  let old_name = expand('%')
-  let new_name = input('New file name: ', expand('%'), 'file')
-  if new_name != '' && new_name != old_name
-    exec ':saveas ' . new_name
-    exec ':silent !rm ' . old_name
-    redraw!
-  endif
-endfunction
-map <leader>rf :call RenameFile()<cr>
-
-
 " Promote variable to RSpec let
 function! PromoteToLet()
   :normal! dd
@@ -554,43 +522,5 @@ endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>let :PromoteToLet<cr>
 
-
-function! OpenURL(url)
-  if has("win32")
-    exe "!start cmd /cstart /b ".a:url.""
-  elseif $DISPLAY !~ '^\w'
-    exe "silent !sensible-browser \"".a:url."\""
-  else
-    exe "silent !sensible-browser -T \"".a:url."\""
-  endif
-  redraw!
-endfunction
-command! -nargs=1 OpenURL :call OpenURL(<q-args>)
-nnoremap <leader>gu :OpenURL <cfile><cr>
-nnoremap gG :OpenURL http://www.google.com/search?q=<cword><cr>
-nnoremap gU :OpenURL http://www.urbandictionary.com/define.php?term=<cword><cr>
-
-
-" function! ExtractVar()
-"   normal ^*``
-"   normal ww
-"   normal "zDdd``
-"   normal cwz
-" endfunction
-" map ,gt :call ExtractVar()<cr>
-
-function! ViewHtmlText(url)
-  if !empty(a:url)
-    new
-    setlocal buftype=nofile bufhidden=hide noswapfile
-    execute 'r !elinks ' . a:url . ' -dump -dump-width ' . winwidth(0)
-    1d
-  endif
-endfunction
-" Save and view text for current html file.
-nnoremap <Leader>H :update<Bar>call ViewHtmlText(expand('%:p'))<CR>
-" View text for visually selected url.
-vnoremap <Leader>h y:call ViewHtmlText(@@)<CR>
-" View text for URL from clipboard.
-" On Linux, use @* for current selection or @+ for text in clipboard.
-nnoremap <Leader>h :call ViewHtmlText(@+)<CR>
+set guioptions=gm
+set guifont=Monaco\ 16
