@@ -119,7 +119,7 @@ if has("gui_running")
   " Tell the term has 256 colors
   set t_Co=256
   set term=gnome-256color
-  colorscheme railscasts
+  colorscheme Tomorrow-Night-Eighties
 
   " solarized
   " colorscheme solarized
@@ -128,7 +128,7 @@ if has("gui_running")
   " set background=dark
 else
   set term=xterm-256color
-  colorscheme jellybeans
+  colorscheme Tomorrow-Night-Eighties
 
   " solarized
   " colorscheme solarized
@@ -219,13 +219,10 @@ xnoremap * :<c-u>call <SID>VSetSearch()<cr>/<c-R>=@/<cr><cr>
 xnoremap # :<c-u>call <SID>VSetSearch()<cr>?<c-R>=@/<cr><cr>
 
 " Generate html from the file with syntax highligh
-nmap <leader>ss :runtime! syntax/2html.vim<cr>
+" nmap <leader>ss :runtime! syntax/2html.vim<cr>
 
 " Execute current ruby file
 nmap <leader>E :!ruby %<cr>
-
-" Open vimrc file
-map <leader>v :e ~/.vim/vimrc<cr>
 
 " Dropbox mappings
 map <leader>dt :e ~/Dropbox/notes/planner/todo.txt<cr>
@@ -315,11 +312,11 @@ vmap <leader>t: :Tabularize /:\zs<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=bundle/ctrlp.vim
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.gif,*.png,*.pdf
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$',
@@ -495,12 +492,12 @@ autocmd vimenter * call s:SetupSnippets()
 function! s:SetupSnippets()
   "if we're in a rails env then read in the rails snippets
   if filereadable("./config/environment.rb")
-    call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-    call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
+    call ExtractSnips("snippets/ruby-rails", "ruby")
+    call ExtractSnips("snippets/eruby-rails", "eruby")
   endif
 
-  call ExtractSnips("~/.vim/snippets/html", "eruby")
-  call ExtractSnips("~/.vim/snippets/html", "xhtml")
+  call ExtractSnips("snippets/html", "eruby")
+  call ExtractSnips("snippets/html", "xhtml")
 endfunction
 
 
