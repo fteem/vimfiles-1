@@ -36,9 +36,7 @@ Personalized vim configuration.
 ## Installation
 
 ```sh
-sudo apt-get install vim-gnome # vim with ruby support
-sudo apt-get install exuberant-ctags ncurses-term xsel
-git clone git://github.com/dalibor/vimfiles.git ~/.vim
+git clone git://github.com/fteem/vimfiles.git ~/.vim
 cd ~/.vim
 git submodule update --init
 echo "source ~/.vim/vimrc" > ~/.vimrc
@@ -47,7 +45,7 @@ echo "source ~/.vim/vimrc" > ~/.vimrc
 ### Update
 
 ```sh
-# Update to newest vimiles
+# Update to newest vimfiles
 cd ~/.vim
 git pull origin master
 
