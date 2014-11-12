@@ -18,7 +18,7 @@ filetype plugin indent on
 set nocompatible
 
 " Use X11 clipboard for yank and paste
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Change the mapleader from \ to ,
 let mapleader = ","
@@ -121,13 +121,15 @@ set term=gnome-256color
 colorscheme Tomorrow-Night-Eighties
 
 " Use Ack instead of grep
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ag --nocolor --nogroup --column"
 set grepprg=ack
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Format JSON file
+com! FormatJSON %!python -m json.tool
 
 " Select last paste in visual mode
 nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
@@ -481,15 +483,6 @@ function! s:SetupSnippets()
   call ExtractSnips("snippets/html", "eruby")
   call ExtractSnips("snippets/html", "xhtml")
 endfunction
-
-
-" Work-around to copy selected text to system clipboard
-" and prevent it from clearing clipboard when using ctrl + z (depends on xsel)
-function! CopyText()
-  normal gv"+y
-  :call system('xsel -ib', getreg('+'))
-endfunction
-vmap <leader>y :call CopyText()<cr>
 
 
 " Search for the current selection
