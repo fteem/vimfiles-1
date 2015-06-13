@@ -26,6 +26,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "tpope/vim-surround"
+Bundle 'kchmck/vim-coffee-script'
 
 " git
 Bundle 'tpope/vim-fugitive'
