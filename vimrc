@@ -1,5 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+filetype plugin indent on     " required!
+
+syntax enable
 
 let mapleader = ","
 
@@ -27,10 +30,14 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "tpope/vim-surround"
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'ervandew/supertab'
 
 " git
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+
+" Rails
+Bundle 'tpope/vim-rails'
 
 Bundle 'bling/vim-airline'
 
@@ -42,14 +49,15 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
   \ --ignore "**/*.pyc"
   \ -g ""'
 
-
-syntax enable
-filetype plugin indent on     " required!
+"""" vim-airline
+" Show vim-airline all the time
+set laststatus=2
+" automatically populate the g:airline_symbols dictionary with the powerline symbols
+let g:airline_powerline_fonts = 1
 
 " Colorscheme
 " Tell the term has 256 colors
 set t_Co=256
-set term=gnome-256color
 colorscheme Tomorrow-Night-Eighties
 
 
@@ -73,14 +81,11 @@ let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', '
 map <leader>/ <plug>NERDCommenterToggle<CR>
 imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 
-" MacVim stuff
-set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14
-
 " Remove the scroll bars
 " and native window tab bar
 " So no eLr etc.
 set guioptions=gm
-set guifont=Monaco\ 16
+set guifont=Source\ Code\ Pro:h14
 
 " NERDTree
 map <leader>p :NERDTreeToggle<CR>
