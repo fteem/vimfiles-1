@@ -103,6 +103,9 @@ set number
 set cursorline
 set colorcolumn=81
 
+" Cross-line delete using backspace
+set backspace=indent,eol,start
+
 " No folding for markdown
 let g:vim_markdown_folding_disabled=1
 " Markdown
