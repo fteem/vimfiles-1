@@ -46,6 +46,8 @@ Bundle 'tpope/vim-rails'
 
 Bundle 'bling/vim-airline'
 
+" Themes
+Bundle 'dracula/vim'
 
 " CtrlP
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
@@ -89,8 +91,7 @@ else
 endif
 
 " Colorscheme
-set background=dark
-colorscheme gruvbox
+color dracula
 
 " Default indent settings
 set shiftwidth=2
