@@ -72,7 +72,6 @@ set laststatus=2
 " automatically populate the g:airline_symbols dictionary with the powerline symbols
 let g:airline_powerline_fonts = 1
 
-
 " Default indent settings
 set shiftwidth=2
 set softtabstop=2
@@ -91,6 +90,9 @@ set backspace=indent,eol,start
 let g:vim_markdown_folding_disabled=1
 " Markdown
 let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml','sql','yaml']
+
+" Clear search highlight with return
+nnoremap <cr> :nohlsearch<cr>
 
 " Commenting
 map <leader>/ <plug>NERDCommenterToggle<CR>
@@ -132,9 +134,6 @@ set hlsearch
 
 " Highlight search match as you type
 set incsearch
-
-" Clear the search buffer when hitting return
-:nnoremap <Esc> :nohlsearch<cr>
 
 " ======================================
 " Window navigation
