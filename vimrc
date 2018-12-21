@@ -17,7 +17,6 @@ Bundle 'junegunn/limelight.vim'
 Bundle 'tpope/vim-markdown'
 Bundle "scrooloose/nerdtree"
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'mxw/vim-jsx'
 Bundle 'mileszs/ack.vim'
@@ -54,15 +53,6 @@ filetype plugin indent on    " required
 
 " Enable syntax highlighting
 syntax enable
-
-" CtrlP
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-  \ --ignore .git
-  \ --ignore .svn
-  \ --ignore .hg
-  \ --ignore .DS_Store
-  \ --ignore "**/*.pyc"
-  \ -g ""'
 
 " ====================================
 " vim-airline
