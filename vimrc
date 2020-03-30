@@ -92,6 +92,11 @@ set incsearch   " Highlight search match as you type
 nnoremap \ :noh<return>
 
 " ======================================
+" Trim trailing whitespace
+" ======================================
+autocmd BufWritePre * :%s/\s\+$//e
+
+" ======================================
 " Window navigation
 " ======================================
 map <c-h> <c-w>h
