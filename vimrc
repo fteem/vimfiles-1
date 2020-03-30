@@ -139,3 +139,25 @@ if isdirectory(".git")
 else
   map <C-p> :Files<cr>
 endif
+
+" ======================================
+" vim-go config
+" ======================================
+let g:go_fmt_command = "goimports"
+" let g:go_highlight_function_calls = 1
+" let g:go_highlight_build_constraints = 1
+let g:go_metalinter_autosave = 0
+let g:go_metalinter_deadline = "2s"
+let g:go_auto_type_info = 1
+let g:go_version_warning = 0
+let g:go_snippet_engine = "automatic"
+let g:go_gopls_enabled = 1
+let g:go_addtags_transform = "snakecase"
+
+" List all declarations in package
+au FileType go nmap <leader>gd :GoDeclsDir<cr>
+
+" Go to alternate file
+au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
+au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
+au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
