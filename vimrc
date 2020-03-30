@@ -58,19 +58,17 @@ set backspace=indent,eol,start
 command! Vimrc :vs $MYVIMRC
 
 " ====================================
+" vim-markdown
+" ====================================
+let g:markdown_fenced_languages = ['go', 'ruby', 'bash=sh']
+
+" ====================================
 " vim-airline
 " ====================================
 " Show vim-airline all the time
 set laststatus=2
 " automatically populate the g:airline_symbols dictionary with the powerline symbols
 let g:airline_powerline_fonts = 1
-
-" ========================================
-" Markdown
-" ========================================
-let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml','sql','yaml']
-" Disable folding
-let g:vim_markdown_folding_disabled=1
 
 " ========================================
 " NERD Commenter
