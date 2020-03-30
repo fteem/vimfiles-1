@@ -71,24 +71,6 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 
 " ========================================
-" NERD Commenter
-" ========================================
-map <leader>/ <plug>NERDCommenterToggle<CR>
-imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>i
-
-" ========================================
-" NERDTree
-" ========================================
-map <leader>p :NERDTreeToggle<CR>
-let NERDTreeShowBookmarks = 0
-let NERDChristmasTree = 1
-let NERDTreeHijackNetrw = 1
-"let NERDTreeQuitOnOpen = 1
-let NERDTreeWinSize = 50
-let g:NERDTreeWinPos = "right"
-let NERDTreeShowHidden=1
-
-" ========================================
 " vim-buffergator
 " ========================================
 let g:buffergator_autoupdate=1
