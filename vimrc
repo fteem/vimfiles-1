@@ -79,9 +79,6 @@ let g:buffergator_viewport_split_policy="T"
 " Switch between last two buffers
 nnoremap <leader><leader> <c-^>
 
-" Avoid using Esc
-" imap jj <Esc>
-
 " ======================================
 " Searching
 " ======================================
