@@ -54,6 +54,9 @@ set colorcolumn=81,121
 " Cross-line delete using backspace
 set backspace=indent,eol,start
 
+" Add Vimrc command that opens .vimrc
+command! Vimrc :vs $MYVIMRC
+
 " ====================================
 " vim-airline
 " ====================================
