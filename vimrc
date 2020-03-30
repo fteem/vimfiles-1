@@ -88,8 +88,8 @@ set smartcase
 
 set hlsearch    " Highlight search matches
 set incsearch   " Highlight search match as you type
-" Clear search highlight with return
-nnoremap <cr> :nohlsearch<cr>
+" Clear search highlight with backslash
+nnoremap \ :noh<return>
 
 " ======================================
 " Window navigation
