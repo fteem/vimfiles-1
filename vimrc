@@ -97,6 +97,18 @@ nnoremap \ :noh<return>
 autocmd BufWritePre * :%s/\s\+$//e
 
 " ======================================
+" Abbreviations
+" ======================================
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+
+" ======================================
 " Window navigation
 " ======================================
 map <c-h> <c-w>h
