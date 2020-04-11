@@ -69,6 +69,9 @@ endif
 " Add Vimrc command that opens .vimrc
 command! Vimrc :vs $MYVIMRC
 
+" Add reload command that reloads $MYVIMRC
+command! Reload :source $MYVIMRC
+
 " ====================================
 " vim-markdown
 " ====================================
