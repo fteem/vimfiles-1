@@ -84,6 +84,7 @@ let g:markdown_fenced_languages = ['go', 'ruby', 'bash=sh']
 set laststatus=2
 " automatically populate the g:airline_symbols dictionary with the powerline symbols
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " ========================================
 " vim-buffergator
