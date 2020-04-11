@@ -135,12 +135,8 @@ map <c-l> <c-w>l
 " ======================================
 " Colorscheme
 " ======================================
-color dracula
-" Disable background color
-if has('nvim')
-  hi Normal guibg=none
-endif
-hi Normal ctermbg=none
+color gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 
 " ======================================
 " fzf config
