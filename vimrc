@@ -3,6 +3,9 @@ filetype off                  " required
 
 set encoding=utf-8
 
+" Keep files open without displaying them on screen
+set hidden
+
 " Set leader key
 let mapleader = ","
 
