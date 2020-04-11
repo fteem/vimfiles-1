@@ -38,6 +38,7 @@ Plugin 'cespare/vim-toml'
 
 " Colorschemes
 Plugin 'dracula/vim'
+Plugin 'gruvbox-community/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
