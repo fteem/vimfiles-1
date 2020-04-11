@@ -61,6 +61,11 @@ set colorcolumn=81,121
 " Cross-line delete using backspace
 set backspace=indent,eol,start
 
+" Neovim only: incremental substitute
+if has('nvim')
+  set inccommand=nosplit
+endif
+
 " Add Vimrc command that opens .vimrc
 command! Vimrc :vs $MYVIMRC
 
